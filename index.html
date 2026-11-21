@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080d14">
+  <title>COBALT | Multimedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="screen">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">C</span><span>COBALT <small>MULTIMEDIA</small></span></div>
+      <div class="top-status"><span class="status-dot"></span><span id="connection">SYSTEM READY</span><span class="divider"></span><span id="topDate">-- --- ----</span></div>
+    </header>
+
+    <section class="dashboard" id="homeView">
+      <div class="welcome">
+        <div class="eyebrow">GOOD TO SEE YOU</div>
+        <div class="clock" id="clock">--:--</div>
+        <div class="date-line" id="dateLine">Loading date...</div>
+        <div class="weather-chip"><span class="sun">☼</span><span>COBALT DRIVE</span><span class="chip-sep">•</span><span>READY</span></div>
+      </div>
+      <div class="main-grid">
+        <button class="tile tile-map" data-app="navigation">
+          <span class="tile-icon">⌖</span><span class="tile-label">NAVIGATION</span><span class="tile-sub">Maps & routes</span>
+        </button>
+        <button class="tile tile-music" data-app="music">
+          <span class="tile-icon">♫</span><span class="tile-label">MUSIC</span><span class="tile-sub">Your audio library</span>
+        </button>
+        <button class="tile" data-app="radio">
+          <span class="tile-icon">◉</span><span class="tile-label">RADIO</span><span class="tile-sub">FM interface</span>
+        </button>
+        <button class="tile" data-app="bluetooth">
+          <span class="tile-icon">ᛒ</span><span class="tile-label">BLUETOOTH</span><span class="tile-sub">Device connection</span>
+        </button>
+        <button class="tile" data-app="vehicle">
+          <span class="tile-icon">▱</span><span class="tile-label">VEHICLE</span><span class="tile-sub">Vehicle information</span>
+        </button>
+        <button class="tile" data-app="settings">
+          <span class="tile-icon">⚙</span><span class="tile-label">SETTINGS</span><span class="tile-sub">System preferences</span>
+        </button>
+      </div>
+      <aside class="now-playing">
+        <div class="album-art">♫</div>
+        <div class="track-info"><strong id="trackTitle">No track selected</strong><span id="trackArtist">Choose music from your phone</span></div>
+        <div class="mini-controls"><button id="miniPlay" aria-label="Play">▶</button><button id="miniStop" aria-label="Stop">■</button></div>
+        <div class="volume-mini"><span>VOL</span><input id="volumeHome" type="range" min="0" max="100" value="65"></div>
+      </aside>
+    </section>
+
+    <section class="app-view hidden" id="appView">
+      <div class="app-heading"><button class="back-btn" id="backHome">←</button><div><div class="eyebrow">COBALT MULTIMEDIA</div><h1 id="appTitle">MUSIC</h1></div></div>
+      <div id="appContent" class="app-content"></div>
+    </section>
+
+    <footer class="bottom-bar">
+      <button class="nav-home active" id="homeButton"><span>⌂</span> HOME</button>
+      <div class="bottom-center"><span class="status-dot"></span> ALL SYSTEMS NORMAL</div>
+      <div class="bottom-right"><span id="footerTime">--:--</span><span class="divider"></span><span>16:9 UI</span></div>
+    </footer>
+    <audio id="audioPlayer"></audio>
+    <input type="file" id="audioFile" accept="audio/*" multiple hidden>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
